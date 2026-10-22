@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2008 The Android Open Source Project
+    modified
+    SPDX-License-Identifier: Apache-2.0 AND GPL-3.0-only
+-->
+
+<!-- The attributes in this XML file provide configuration information -->
+<!-- for the Input Method Manager. -->
+
+<!-- TODO: use <lang>_keyboard icon instead of a common keyboard icon. -->
+<!-- "AsciiCapable" is kept in extra values, as per recommendation in Android documentation -->
+<!-- Note: SupportTouchPositionCorrection extra value is obsolete and maintained for backward
+     compatibility. -->
+<!-- If IME doesn't have an applicable subtype, the first subtype will be used as a default
+     subtype.-->
+<input-method xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:settingsActivity="helium314.keyboard.settings.SettingsActivity"
+        android:isDefault="@bool/im_is_default"
+        android:supportsSwitchingToNextInputMethod="true"
+        android:supportsInlineSuggestions="true"
+        tools:targetApi="r">
+    <subtype android:icon="@drawable/ic_ime_switcher"
+        android:label="@string/subtype_en_US"
+        android:subtypeId="0xc9194f98"
+        android:imeSubtypeLocale="en_US"
+        android:languageTag="en-US"
+        android:imeSubtypeMode="keyboard"
+        android:imeSubtypeExtraValue="TrySuppressingImeSwitcher,AsciiCapable,SupportTouchPositionCorrection,EmojiCapable"
+        android:isAsciiCapable="true"
+        />
+    <!-- This Hinglish keyboard is a preliminary layout.
+           This isn't based on the final specification.
+           Was disabled because there is no LM yet, and this layout does not offer anything different. -->
+    <!-- Java uses the deprecated "in" code instead of the standard "id" code for Indonesian. -->
+    <!-- Java uses the deprecated "iw" code instead of the standard "he" code for Hebrew. -->
+    <subtype android:icon="@drawable/ic_ime_switcher"
+        android:label="@string/subtype_generic"
+        android:subtypeId="0x763a8752"
+        android:imeSubtypeLocale="ru"
+        android:languageTag="ru"
+        android:imeSubtypeMode="keyboard"
+        android:imeSubtypeExtraValue="KeyboardLayoutSet=MAIN:russian,SupportTouchPositionCorrection,EmojiCapable"
+        android:isAsciiCapable="false"
+    />
+    <!-- TODO: This Sinhala keyboard is a preliminary layout.
+           This isn't based on the final specification. -->
+    <!-- si_LK is currently disabled due to lack of combination rules. -->
+    <!-- This Serbian Latin keyboard is a preliminary layout.
+           This isn't based on the final specification. -->
+    <!-- TODO: Enabling/Disabling ta_LK subtype must be aligned with si_LK subtype. -->
+    <!-- ta_LK disabled alongside si_LK subtype due to lack of combination rules.
+    !-->
+    <subtype android:icon="@drawable/ic_ime_switcher"
+        android:label="@string/subtype_generic"
+        android:subtypeId="0x4a3179de"
+        android:imeSubtypeLocale="tr"
+        android:languageTag="tr"
+        android:imeSubtypeMode="keyboard"
+        android:imeSubtypeExtraValue="KeyboardLayoutSet=MAIN:turkish,AsciiCapable,SupportTouchPositionCorrection,EmojiCapable"
+        android:isAsciiCapable="true"
+    />
+    <!-- This Uzbek keyboard is a preliminary layout.
+           This isn't based on the final specification. -->
+</input-method>
